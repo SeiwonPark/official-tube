@@ -73,7 +73,7 @@ async function main() {
 
   filterVideoList();
 
-  var observer = new MutationObserver(async (mutationsList, _observer) => {
+  var observer = new MutationObserver(async (mutationsList, _) => {
     for (let mutation of mutationsList) {
       if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
         await filterVideoList();
