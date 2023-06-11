@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "official-tube",
+  "version": "1.0.0",
+  "description": "Filter only official videos",
+  "icons": {
+    "64": "assets/icon64.png",
+    "128": "assets/icon128.png",
+    "256": "assets/icon256.png"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/content.js"
+      ],
+      "matches": [
+        "https://www.youtube.com/results?*"
+      ],
+      "css": [
+        "styles/inject.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
