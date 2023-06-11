@@ -72,6 +72,18 @@ async function main() {
   }
 
   filterVideoList();
+
+  var observer = new MutationObserver(async (mutationsList, _observer) => {
+    for (let mutation of mutationsList) {
+      if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
+        await filterVideoList();
+        break;
+      }
+    }
+  });
+
+  var videoListContainer = document.querySelector("#contents");
+  observer.observe(videoListContainer, { childList: true, subtree: true });
 }
 
 main();
