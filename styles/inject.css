@@ -16,3 +16,7 @@
   margin: 0;
   padding: 0;
 }
+
+.tg__button:focus {
+  outline: none;
+}
