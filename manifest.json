@@ -10,17 +10,6 @@
     "128": "assets/icon128.png",
     "256": "assets/icon256.png"
   },
-  "content_scripts": [
-    {
-      "matches": [
-        "https://www.youtube.com/results?*"
-      ],
-      "css": [
-        "styles/inject.css"
-      ],
-      "run_at": "document_end"
-    }
-  ],
   "web_accessible_resources": [
     {
       "resources": [
