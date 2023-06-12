@@ -95,4 +95,8 @@ async function main() {
   }
 }
 
+if (typeof OFFICIAL_TUBE_STATE_KEY === "undefined") {
+  const OFFICIAL_TUBE_STATE_KEY = "official-tube-toggle-state";
+}
+
 main();
