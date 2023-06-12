@@ -12,15 +12,13 @@
   },
   "content_scripts": [
     {
-      "js": [
-        "scripts/content.js"
-      ],
       "matches": [
         "https://www.youtube.com/results?*"
       ],
       "css": [
         "styles/inject.css"
-      ]
+      ],
+      "run_at": "document_end"
     }
   ],
   "web_accessible_resources": [
@@ -34,6 +32,16 @@
     }
   ],
   "permissions": [
-    "storage"
+    "webNavigation",
+    "storage",
+    "scripting",
+    "background"
+  ],
+  "background": {
+    "service_worker": "workers/background.js",
+    "type": "module"
+  },
+  "host_permissions": [
+    "https://www.youtube.com/results?*"
   ]
 }
