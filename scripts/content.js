@@ -2,9 +2,14 @@ const OFFICIAL_TUBE_STATE_KEY = "official-tube-toggle-state";
 
 const getToggleState = async () => {
   return new Promise((resolve) => {
-    chrome.storage.local.get(OFFICIAL_TUBE_STATE_KEY, (result) => {
-      resolve(result[OFFICIAL_TUBE_STATE_KEY]);
-    });
+    try {
+      chrome.storage.local.get(OFFICIAL_TUBE_STATE_KEY, (result) => {
+        resolve(result[OFFICIAL_TUBE_STATE_KEY]);
+      });
+    } catch {
+      setToggleState("disabled");
+      return "disabled";
+    }
   });
 };
 
@@ -23,9 +28,11 @@ const toggleState = (currentState) => {
 };
 
 const setToggleState = async (state) => {
-  await chrome.storage.local.set({
-    [OFFICIAL_TUBE_STATE_KEY]: state,
-  });
+  if (chrome.runtime?.id) {
+    await chrome.storage.local.set({
+      [OFFICIAL_TUBE_STATE_KEY]: state,
+    });
+  }
 };
 
 async function filterVideoList() {
@@ -36,8 +43,9 @@ async function filterVideoList() {
     videoList.forEach((video) => {
       const title = video.querySelector("h3")?.textContent?.trim();
       const badge = video.querySelector(".badge-style-type-verified");
+      const artist = video.querySelector(".badge-style-type-verified-artist");
 
-      if (!(title?.includes("MV") || badge)) {
+      if (!(title?.includes("MV") || badge || artist)) {
         video.style.display = state === "enabled" ? "none" : "";
       }
     });
@@ -57,11 +65,13 @@ async function main() {
     toggleButton.className = "tg__button";
     toggleImage.width = 24;
 
-    await updateImageSrc(toggleImage);
-
     toggleButton.appendChild(toggleImage);
     toggleWrapper.appendChild(toggleButton);
     filterMenu.appendChild(toggleWrapper);
+
+    if (chrome.runtime?.id) {
+      await updateImageSrc(toggleImage);
+    }
 
     toggleButton.addEventListener("click", async () => {
       const targetState = toggleState(toggleImage.src);
