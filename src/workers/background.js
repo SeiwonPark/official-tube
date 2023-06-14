@@ -5,14 +5,14 @@ const filters = {
 const injectCss = (details) => {
   chrome.scripting.insertCSS({
     target: { tabId: details.tabId },
-    files: ["styles/inject.css"],
+    files: ["content.css"],
   });
 };
 
 const injectScript = (details) => {
   chrome.scripting.executeScript({
     target: { tabId: details.tabId, allFrames: true },
-    files: ["scripts/content.js"],
+    files: ["content.js"],
   });
 };
 

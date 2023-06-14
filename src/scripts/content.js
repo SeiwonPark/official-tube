@@ -6,6 +6,9 @@
  * The button state (enabled or disabled) is stored in Chrome's local storage
  * and will be preserved across browser sessions.
  */
+
+import "../styles/inject.css";
+
 (() => {
   const OFFICIAL_TUBE_STATE_KEY = "official-tube-toggle-state";
 
