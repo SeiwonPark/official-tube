@@ -17,16 +17,15 @@ Available at [Chrome Extension Store](https://chrome.google.com/webstore/detail/
 <br/>   
 
 ## What's the purpose of this project?
-With [Youtube's Creator Awards program](https://support.google.com/youtube/answer/7682560#zippy=%2Celigibility-criteria%2Credeem-a-youtube-creator-award%2Cshipping-and-delivery), I somewhat felt better as I could filter videos that are not from the original authors. But still I had to watch too much videos that raise eyebrows.
+With [Youtube's Creator Awards program](https://support.google.com/youtube/answer/7682560#zippy=%2Celigibility-criteria%2Credeem-a-youtube-creator-award%2Cshipping-and-delivery), I somewhat felt satisfied as I could filter videos that are not from the original authors. But still I had to watch too much videos that raise eyebrows.
 
-Some might not want to watch disgusting videos although they're from "verified channel"s, or videos that are way too much for noise marketing(i.e., thumbnails are exaggerated or irrelevant, some cases where titles doesn't match the video content.)
+Some might not want to watch overly commercialized videos although they're from "verified channel"s, or videos that are made for noise marketing(i.e., thumbnails are exaggerated or irrelevant, some cases where titles doesn't match the video content.)
 
 And the same applies to Youtube Shorts.
 
-Youtube provides reporting system and we could simply ignore the channel itself or video content, but still chores exist as we have to watch and check the content every time. And there're way too much channels we should report or ignore.
+Youtube provides reporting system and we could simply ignore the channel itself or video content, but that becomes another chore as we have to watch and check the content every time. And there're bunch of channels or videos which might be overwhelming.
 
 So, I just wanted to rule out those videos for my clean and satisfying Youtube life.
-
 
 <br/>   
 
