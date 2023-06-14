@@ -1,15 +1,17 @@
 # official-tube
 
+![](https://img.shields.io/chrome-web-store/v/jpcgmkbacpieccbkpkcdejiinbcgnnnf) ![](https://img.shields.io/github/license/SeiwonPark/official-tube)
+
 |Disabled|Enabled|
 |:-:|:-:|
-|<img width="400" src="./assets/disabled-snapshot.png" alt="disabled-snapshot" />|<img width="400" src="./assets/enabled-snapshot.png" alt="enabled-snapshot" />|
+|<img width="400" src="./images/disabled-snapshot.png" alt="disabled-snapshot" />|<img width="400" src="./images/enabled-snapshot.png" alt="enabled-snapshot" />|
 
 You can filter youtube videos from officially granted channels by simply clicking the button next to filter menu.
 
 Available at [Chrome Extension Store](https://chrome.google.com/webstore/detail/official-tube/jpcgmkbacpieccbkpkcdejiinbcgnnnf)
 
 <a href="https://chrome.google.com/webstore/detail/official-tube/jpcgmkbacpieccbkpkcdejiinbcgnnnf">
-<img width="600" src="./assets/chrome-extension-market.png" alt="chrome-extension-market" />
+<img width="600" src="./images/chrome-extension-market.png" alt="chrome-extension-market" />
 </a>
 
 <br/>   
