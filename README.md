@@ -2,6 +2,12 @@
 
 You can filter youtube videos from officially granted channels by simply clicking the button next to filter menu.
 
+Available at [Chrome Extension Store](https://chrome.google.com/webstore/detail/official-tube/jpcgmkbacpieccbkpkcdejiinbcgnnnf)
+
+<a href="https://chrome.google.com/webstore/detail/official-tube/jpcgmkbacpieccbkpkcdejiinbcgnnnf">
+<img width="600" src="./assets/chrome-extension-market.png" alt="chrome-extension-market" />
+</a>
+
 <br/>   
 
 ## What's the purpose of this project?
