@@ -1,6 +1,7 @@
 const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -17,12 +18,21 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env", "@babel/preset-react"],
+        use: [
+          {
+            loader: "swc-loader",
+            options: {
+              jsc: {
+                parser: {
+                  syntax: "ecmascript",
+                  jsx: true,
+                  dynamicImport: true,
+                },
+                target: "es2015",
+              },
+            },
           },
-        },
+        ],
       },
       {
         test: /\.css$/i,
@@ -37,5 +47,11 @@ module.exports = {
     new CopyPlugin({
       patterns: [{ from: "public" }],
     }),
+    new NodePolyfillPlugin(),
   ],
+  resolve: {
+    fallback: {
+      fs: false,
+    },
+  },
 };
