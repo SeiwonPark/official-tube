@@ -1,5 +1,7 @@
 # official-tube
 
+![](https://img.shields.io/chrome-web-store/v/jpcgmkbacpieccbkpkcdejiinbcgnnnf) ![](https://img.shields.io/github/license/SeiwonPark/official-tube)
+
 |Disabled|Enabled|
 |:-:|:-:|
 |<img width="400" src="./images/disabled-snapshot.png" alt="disabled-snapshot" />|<img width="400" src="./images/enabled-snapshot.png" alt="enabled-snapshot" />|
