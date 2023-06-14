@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "official-tube",
-  "version": "1.2.1",
+  "version": "1.3.1",
   "description": "Filter only official videos",
   "icons": {
     "16": "assets/icon16.png",
@@ -34,6 +34,7 @@
     "type": "module"
   },
   "host_permissions": [
-    "https://www.youtube.com/results?*"
+    "https://www.youtube.com/results?*",
+    "https://www.youtube.com/@*"
   ]
 }
