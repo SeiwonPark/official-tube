@@ -23,7 +23,7 @@ And the same applies to Youtube Shorts.
 
 Youtube provides reporting system and we could simply ignore the channel itself or video content, but still chores exist as we have to watch and check the content every time. And there're way too much channels we should report or ignore.
 
-So, I justed wanted to rule out those videos for my clean and satisfying Youtube life.
+So, I just wanted to rule out those videos for my clean and satisfying Youtube life.
 
 
 <br/>   
