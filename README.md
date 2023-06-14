@@ -1,5 +1,9 @@
 # official-tube
 
+|Disabled|Enabled|
+|:-:|:-:|
+|<img width="400" src="./assets/disabled-snapshot.png" alt="disabled-snapshot" />|<img width="400" src="./assets/enabled-snapshot.png" alt="enabled-snapshot" />|
+
 You can filter youtube videos from officially granted channels by simply clicking the button next to filter menu.
 
 Available at [Chrome Extension Store](https://chrome.google.com/webstore/detail/official-tube/jpcgmkbacpieccbkpkcdejiinbcgnnnf)
@@ -13,7 +17,7 @@ Available at [Chrome Extension Store](https://chrome.google.com/webstore/detail/
 ## What's the purpose of this project?
 With [Youtube's Creator Awards program](https://support.google.com/youtube/answer/7682560#zippy=%2Celigibility-criteria%2Credeem-a-youtube-creator-award%2Cshipping-and-delivery), I somewhat felt better as I could filter videos that are not from the original authors. But still I had to watch too much videos that raise eyebrows.
 
-Some might not want to watch disgusting videos although they're from "verified channel"s, or videos that are way too much for noisy marketing(i.e., thumbnails are exaggerated or irrelevant, some cases where titles doesn't match the video content.)
+Some might not want to watch disgusting videos although they're from "verified channel"s, or videos that are way too much for noise marketing(i.e., thumbnails are exaggerated or irrelevant, some cases where titles doesn't match the video content.)
 
 And the same applies to Youtube Shorts.
 
