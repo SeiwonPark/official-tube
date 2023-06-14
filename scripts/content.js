@@ -11,7 +11,7 @@
 
   // Separate util functions to local scope.
   var utils = {
-    getToggleState: async () => {
+    getToggleState: async function () {
       return new Promise((resolve) => {
         chrome.storage.local.get(OFFICIAL_TUBE_STATE_KEY, (result) => {
           resolve(result[OFFICIAL_TUBE_STATE_KEY]);
@@ -19,21 +19,21 @@
       });
     },
 
-    getImageUrl: (state) => {
+    getImageUrl: function (state) {
       const currentState = state === "enabled" ? "enabled" : "disabled";
       return chrome.runtime.getURL(`assets/${currentState}.png`);
     },
 
-    updateImageSrc: async (imageElement) => {
+    updateImageSrc: async function (imageElement) {
       const state = await this.getToggleState();
       imageElement.src = this.getImageUrl(state);
     },
 
-    toggleState: (currentState) => {
+    toggleState: function (currentState) {
       return currentState.endsWith("disabled.png") ? "enabled" : "disabled";
     },
 
-    setToggleState: async (state) => {
+    setToggleState: async function (state) {
       if (chrome.runtime?.id) {
         await chrome.storage.local.set({
           [OFFICIAL_TUBE_STATE_KEY]: state,
@@ -41,7 +41,7 @@
       }
     },
 
-    filterVideoList: async () => {
+    filterVideoList: async function () {
       if (chrome.runtime?.id) {
         const state = await this.getToggleState();
         var videoList = document.querySelectorAll("ytd-video-renderer");
