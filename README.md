@@ -36,7 +36,6 @@ So, I just wanted to rule out those videos for my clean and satisfying Youtube l
 <br/>   
 
 ## Future works
-- Filtering Youtube Shorts
 - Filtering videos with exaggerated thumbnails
 
 <br/>   
