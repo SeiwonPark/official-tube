@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "official-tube",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Filter only official videos",
   "icons": {
     "16": "assets/icon16.png",
