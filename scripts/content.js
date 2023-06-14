@@ -1,3 +1,11 @@
+/**
+ * This script is used to create a toggle button in the YouTube filter menu.
+ * When the button is `enabled`, all YouTube videos in the video list that are not music videos
+ * (i.e., they do not contain "MV" in the title and are not from verified artists)
+ * will be hidden. When the button is `disabled`, all videos will be displayed normally.
+ * The button state (enabled or disabled) is stored in Chrome's local storage
+ * and will be preserved across browser sessions.
+ */
 (() => {
   const OFFICIAL_TUBE_STATE_KEY = "official-tube-toggle-state";
 
