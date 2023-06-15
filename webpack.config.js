@@ -49,9 +49,4 @@ module.exports = {
     }),
     new NodePolyfillPlugin(),
   ],
-  resolve: {
-    fallback: {
-      fs: false,
-    },
-  },
 };
