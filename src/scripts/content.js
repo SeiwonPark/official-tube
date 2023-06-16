@@ -112,7 +112,9 @@ import "../styles/inject.css";
 
     utils.filterVideoList();
 
-    var videoListContainer = document.querySelector("#contents");
+    var videoListContainer = document.querySelector(
+      "ytd-section-list-renderer #contents"
+    );
     if (videoListContainer) {
       observer.observe(videoListContainer, { childList: true, subtree: true });
     }
