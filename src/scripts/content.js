@@ -14,6 +14,13 @@ import "../styles/inject.css";
 
   // Separate util functions to local scope.
   var utils = {
+    detectSystemTheme: function () {
+      return window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+    },
+
     getToggleState: async function () {
       return new Promise((resolve) => {
         chrome.storage.local.get(OFFICIAL_TUBE_STATE_KEY, (result) => {
@@ -23,7 +30,10 @@ import "../styles/inject.css";
     },
 
     getImageUrl: function (state) {
-      const currentState = state === "enabled" ? "enabled" : "disabled";
+      const theme = this.detectSystemTheme();
+      console.log(theme);
+      const currentState =
+        state === "enabled" ? "enabled" : `disabled-${theme}`;
       return chrome.runtime.getURL(`assets/${currentState}.png`);
     },
 
@@ -33,7 +43,10 @@ import "../styles/inject.css";
     },
 
     toggleState: function (currentState) {
-      return currentState.endsWith("disabled.png") ? "enabled" : "disabled";
+      const theme = this.detectSystemTheme();
+      return currentState.endsWith("enabled.png")
+        ? `disabled-${theme}`
+        : "enabled";
     },
 
     setToggleState: async function (state) {
