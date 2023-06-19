@@ -31,7 +31,6 @@ import "../styles/inject.css";
 
     getImageUrl: function (state) {
       const theme = this.detectSystemTheme();
-      console.log(theme);
       const currentState =
         state === "enabled" ? "enabled" : `disabled-${theme}`;
       return chrome.runtime.getURL(`assets/${currentState}.png`);
